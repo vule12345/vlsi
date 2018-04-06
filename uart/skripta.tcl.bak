@@ -1,0 +1,235 @@
+;# look in my book(s) or www.amos.eguru-il.com
+;#######################################################################
+;# A template script for the assigning the (A-C4E6) board  by ???????? #
+;# Choosing: device, pins, and making design safer !                   #
+;# Written by: Amos Zaslavsky (C)copyright - Ver 3.0                   #
+;#######################################################################
+puts \n
+if {![is_project_open]} {
+   puts "========================================"
+   puts " ERROR: Assignments can not be done,    "
+   puts " because there isn't any project open ! "
+   puts "========================================"		
+   } else {	     
+   puts "===================================="
+   puts " Assigning the A-C4E6 device & pins "
+   puts " ...                                "
+
+   ;#######################
+   ;# 50 MHz Clock Signal #
+   ;#######################
+
+    set_location_assignment PIN_23 -to clk    ;# CLK
+#   set_location_assignment PIN_23 -to CLK_50 ;# CLK_50
+
+#   set_location_assignment PIN_24 -to CLK_USER ;# CLK_50
+
+
+   ;#######################################################
+   ;# Non-Debounced White Push-Buttons ('0' when pressed) #
+   ;#######################################################
+
+#   set_location_assignment PIN_90 -to key[2] ;# key[2] on the right
+#   set_location_assignment PIN_91 -to key[3] ;# key[3]
+    set_location_assignment PIN_87 -to rx_empty ;# key[4]
+#   set_location_assignment PIN_86 -to key[5] ;# key[5] on the left
+
+   ;############################################
+   ;# Miniature Slide Switches ('0' when down) #
+   ;############################################
+
+#   set_location_assignment PIN_58 -to SW[0] ;# SW[0] on the right
+#   set_location_assignment PIN_59 -to SW[1] ;# SW[1]
+#   set_location_assignment PIN_60 -to SW[2] ;# SW[2]
+#   set_location_assignment PIN_64 -to SW[3] ;# SW[3]
+#   set_location_assignment PIN_65 -to SW[4] ;# SW[4]
+#   set_location_assignment PIN_66 -to SW[5] ;# SW[5]
+#   set_location_assignment PIN_67 -to SW[6] ;# SW[6]
+#   set_location_assignment PIN_68 -to SW[7] ;# SW[7] on the left
+
+   ;###########################################
+   ;# 12  LED Lamps                           #
+   ;# Active Low - ON wnen '0' , OFF when '1' #
+   ;###########################################
+
+#   set_location_assignment PIN_72  -to LEDR[3]   ;# LEDR[3]
+#   set_location_assignment PIN_73  -to LEDR[4]   ;# LEDR[4]
+#   set_location_assignment PIN_74  -to LEDR[5]   ;# LEDR[5]
+#   set_location_assignment PIN_80  -to LEDR[6]   ;# LEDR[6]
+#   set_location_assignment PIN_83  -to LEDR[7]   ;# LEDR[7]
+#   set_location_assignment PIN_84  -to LEDR[8]   ;# LEDR[8]
+#   set_location_assignment PIN_77  -to LEDR[9]   ;# LEDR[9]
+#   set_location_assignment PIN_76  -to LEDR[10]  ;# LEDR[10]
+#   set_location_assignment PIN_75  -to LEDR[11]  ;# LEDR[11]
+#   set_location_assignment PIN_71  -to LEDR[12]  ;# LEDR[12]
+#   set_location_assignment PIN_70  -to LEDR[13]  ;# LEDR[13]
+#   set_location_assignment PIN_69  -to LEDR[14]  ;# LEDR[14]
+
+   ;##################################
+   ;# 7 * Seven Segments             #
+   ;# a=6 b=5 c=4 d=3 e=2 f=1 g=0    #
+   ;# DP is connected to HEXS[7]     #
+   ;# Active low (ON when seg = '0') #
+   ;# Active low (ON when ena = '0') #
+   ;##################################
+
+   # Active-Low segment data
+#   set_location_assignment PIN_115 -to ssegN[7] ;# DP
+#   set_location_assignment PIN_127 -to ssegN[6] ;# A
+#   set_location_assignment PIN_126 -to ssegN[5] ;# B
+#   set_location_assignment PIN_125 -to ssegN[4] ;# C
+#   set_location_assignment PIN_124 -to ssegN[3] ;# D
+#   set_location_assignment PIN_121 -to ssegN[2] ;# E
+#   set_location_assignment PIN_120 -to ssegN[1] ;# F   
+#   set_location_assignment PIN_119 -to ssegN[0] ;# G
+
+   # Active-Low enable
+#   set_location_assignment PIN_128 -to dig_enaN[0] ;# Right Seven_Segment
+#   set_location_assignment PIN_129 -to dig_enaN[1]
+#   set_location_assignment PIN_132 -to dig_enaN[2]
+#   set_location_assignment PIN_133 -to dig_enaN[3]
+#   set_location_assignment PIN_135 -to dig_enaN[4]
+#   set_location_assignment PIN_136 -to dig_enaN[5]
+#   set_location_assignment PIN_137 -to dig_enaN[6]
+#   set_location_assignment PIN_138 -to dig_enaN[7] ;# Left Seven_Segment 
+
+   ;######################
+   ;# speaker Active Low #
+   ;######################
+#   set_location_assignment PIN_141 -to BUZZER
+
+   ;##################################
+   ;# UART (serial port) pin signals #
+   ;##################################
+   ;# Using on board MAX232 transceiver
+
+#   set_location_assignment PIN_114 -to RX  ;# activate LED15 ??
+#   set_location_assignment PIN_113 -to TX  ;# activate LED16 ??
+
+   ###############
+   # PS2 signals #
+   ###############
+#   set_location_assignment PIN_11 -to PS2_CLK
+#   set_location_assignment PIN_10 -to PS2_DAT
+
+   ;#######
+   ;# VGA #
+   ;#######
+   
+#   set_location_assignment PIN_142 -to HORIZ_SYNC
+#   set_location_assignment PIN_143 -to VERT_SYNC
+
+#   set_location_assignment PIN_2   -to RED
+#   set_location_assignment PIN_1   -to GREEN
+#   set_location_assignment PIN_144 -to BLUE
+
+   ;##############################################
+   ;# Alfanumeric LCD display not including data #
+   ;##############################################
+   
+   ;# data BUS
+#   set_location_assignment PIN_112 -to CLCD_D[7]   
+#   set_location_assignment PIN_111 -to CLCD_D[6]   
+#   set_location_assignment PIN_110 -to CLCD_D[5]   
+#   set_location_assignment PIN_106 -to CLCD_D[4]   
+#   set_location_assignment PIN_105 -to CLCD_D[3]   
+#   set_location_assignment PIN_104 -to CLCD_D[2]   
+#   set_location_assignment PIN_103 -to CLCD_D[1]   
+#   set_location_assignment PIN_101 -to CLCD_D[0]   
+   ;# Enable
+#   set_location_assignment PIN_100 -to CLCD_EN
+   ;# register select
+#   set_location_assignment PIN_85 -to CLCD_RS   
+   ;# read_writeN
+#   set_location_assignment PIN_99 -to CLCD_RW 
+
+
+   ;###################################
+   ;# I2C AT24C04 Serial (I2C) EEPROM # 
+   ;###################################
+
+#   set_location_assignment PIN_3 -to SDA  
+#   set_location_assignment PIN_7 -to SCL
+
+   ;#################
+   ;# EXTERNAL GPIO # 
+   ;#################
+
+
+    set_location_assignment PIN_30  -to rx
+    set_location_assignment PIN_28  -to tx
+
+#   set_location_assignment PIN_32  -to JP3
+#   set_location_assignment PIN_31  -to JP4
+
+#   set_location_assignment PIN_34  -to JP5
+#   set_location_assignment PIN_33  -to JP6
+
+#   set_location_assignment PIN_39  -to JP7
+#   set_location_assignment PIN_38  -to JP8
+
+# JP9  = GND
+# JP10 = GND
+
+#   set_location_assignment PIN_42  -to JP11
+#   set_location_assignment PIN_43  -to JP12
+
+#   set_location_assignment PIN_44  -to JP13
+#   set_location_assignment PIN_46  -to JP14
+
+#   set_location_assignment PIN_49  -to JP15
+#   set_location_assignment PIN_50  -to JP16
+
+# JP17 - GND
+# JP18 0 GND
+
+#   set_location_assignment PIN_52  -to JP19
+#   set_location_assignment PIN_51  -to JP20
+
+#   set_location_assignment PIN_54  -to JP21
+#   set_location_assignment PIN_53  -to JP22
+
+#   set_location_assignment PIN_58  -to JP23
+#   set_location_assignment PIN_55  -to JP25
+
+# JP25 - GND
+# JP26 - GND
+
+#   set_location_assignment PIN_89  -to JP17
+#   set_location_assignment PIN_88  -to JP28
+
+
+
+   ;##############################################
+   ;# Device selection & Making connections safe #   EP4CE6E22C8N
+   ;##############################################
+      
+   ;# Analysis & Synthesis Assignments
+   set_global_assignment -name FAMILY "Cyclone IV E"
+   set_global_assignment -name DEVICE "EP4CE6E22C8"      ;# option #1
+   # set_global_assignment -name DEVICE "EP4CE10E22C8"   ;# option #2 
+   set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
+   set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+   set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
+   set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+   set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+   set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+   set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+   set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+   set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+   
+      
+   ;# for EDA tools (post synthesis gate level simulation)
+   set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+   set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+
+   puts " And making the design safer !   "
+   puts "================================="
+   
+   ;# run compilation after pin assignment
+#   load_package flow
+#   execute_flow -compile
+
+}
+
+

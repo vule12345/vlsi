@@ -1,0 +1,1254 @@
+TimeQuest Timing Analyzer report for uart
+Sun Apr  1 20:17:49 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; uart                                                ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE6E22C8                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.04        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   3.7%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 182.05 MHz ; 182.05 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -4.493 ; -1166.570          ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.432 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -471.405                         ;
++-------+--------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                   ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.493 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.080     ; 5.414      ;
+; -4.488 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.080     ; 5.409      ;
+; -4.486 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.080     ; 5.407      ;
+; -4.434 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.080     ; 5.355      ;
+; -4.432 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.080     ; 5.353      ;
+; -4.415 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.080     ; 5.336      ;
+; -4.405 ; fifo:fifo_transmiter_map|array_reg[21][0] ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.089     ; 5.317      ;
+; -4.397 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.077     ; 5.321      ;
+; -4.364 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.077     ; 5.288      ;
+; -4.347 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 1.000        ; -0.080     ; 5.268      ;
+; -4.323 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 1.000        ; -0.080     ; 5.244      ;
+; -4.289 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[6]     ; clk          ; clk         ; 1.000        ; -0.079     ; 5.211      ;
+; -4.286 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.077     ; 5.210      ;
+; -4.276 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.080     ; 5.197      ;
+; -4.271 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.080     ; 5.192      ;
+; -4.263 ; fifo:fifo_transmiter_map|array_reg[19][3] ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.589     ; 4.675      ;
+; -4.258 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[1]     ; clk          ; clk         ; 1.000        ; -0.080     ; 5.179      ;
+; -4.242 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; transmiter:transmiter_map|data_reg[6]     ; clk          ; clk         ; 1.000        ; -0.079     ; 5.164      ;
+; -4.241 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][7]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][6]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][5]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][4]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][3]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][2]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][1]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][0]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][7]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][6]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][5]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][4]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][3]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][2]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][1]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.241 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][0]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.166      ;
+; -4.220 ; fifo:fifo_transmiter_map|array_reg[11][2] ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.593     ; 4.628      ;
+; -4.216 ; fifo:fifo_transmiter_map|array_reg[5][2]  ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.089     ; 5.128      ;
+; -4.213 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][7] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][6] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][5] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][4] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][3] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][2] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][1] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][0] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][7] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][6] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][5] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][4] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][3] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][2] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][1] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.213 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][0] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.134      ;
+; -4.189 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][7]  ; clk          ; clk         ; 1.000        ; -0.075     ; 5.115      ;
+; -4.189 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][6]  ; clk          ; clk         ; 1.000        ; -0.075     ; 5.115      ;
+; -4.189 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][5]  ; clk          ; clk         ; 1.000        ; -0.075     ; 5.115      ;
+; -4.189 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][4]  ; clk          ; clk         ; 1.000        ; -0.075     ; 5.115      ;
+; -4.189 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][3]  ; clk          ; clk         ; 1.000        ; -0.075     ; 5.115      ;
+; -4.189 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][2]  ; clk          ; clk         ; 1.000        ; -0.075     ; 5.115      ;
+; -4.189 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][1]  ; clk          ; clk         ; 1.000        ; -0.075     ; 5.115      ;
+; -4.189 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][0]  ; clk          ; clk         ; 1.000        ; -0.075     ; 5.115      ;
+; -4.166 ; fifo:fifo_transmiter_map|array_reg[26][0] ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.589     ; 4.578      ;
+; -4.165 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][7]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.090      ;
+; -4.165 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][6]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.090      ;
+; -4.165 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][5]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.090      ;
+; -4.165 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][4]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.090      ;
+; -4.165 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][3]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.090      ;
+; -4.165 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][2]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.090      ;
+; -4.165 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][1]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.090      ;
+; -4.165 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][0]  ; clk          ; clk         ; 1.000        ; -0.076     ; 5.090      ;
+; -4.161 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[30][7] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.083      ;
+; -4.161 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[30][6] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.083      ;
+; -4.161 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[30][5] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.083      ;
+; -4.161 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[30][4] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.083      ;
+; -4.161 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[30][3] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.083      ;
+; -4.161 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[30][2] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.083      ;
+; -4.161 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[30][1] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.083      ;
+; -4.161 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[30][0] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.083      ;
+; -4.159 ; m_mod:m_mod_map|num_reg[2]                ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 1.000        ; -0.079     ; 5.081      ;
+; -4.159 ; m_mod:m_mod_map|num_reg[2]                ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.079     ; 5.081      ;
+; -4.159 ; m_mod:m_mod_map|num_reg[2]                ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.079     ; 5.081      ;
+; -4.159 ; m_mod:m_mod_map|num_reg[2]                ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.079     ; 5.081      ;
+; -4.159 ; m_mod:m_mod_map|num_reg[2]                ; transmiter:transmiter_map|data_reg[1]     ; clk          ; clk         ; 1.000        ; -0.079     ; 5.081      ;
+; -4.155 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.080     ; 5.076      ;
+; -4.152 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][7]  ; clk          ; clk         ; 1.000        ; -0.082     ; 5.071      ;
+; -4.152 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][6]  ; clk          ; clk         ; 1.000        ; -0.082     ; 5.071      ;
+; -4.152 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][5]  ; clk          ; clk         ; 1.000        ; -0.082     ; 5.071      ;
+; -4.152 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][4]  ; clk          ; clk         ; 1.000        ; -0.082     ; 5.071      ;
+; -4.152 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][3]  ; clk          ; clk         ; 1.000        ; -0.082     ; 5.071      ;
+; -4.152 ; fifo:fifo_transmiter_map|array_reg[2][6]  ; transmiter:transmiter_map|data_reg[6]     ; clk          ; clk         ; 1.000        ; -0.077     ; 5.076      ;
+; -4.152 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][7]  ; clk          ; clk         ; 1.000        ; -0.082     ; 5.071      ;
+; -4.152 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][6]  ; clk          ; clk         ; 1.000        ; -0.082     ; 5.071      ;
+; -4.152 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][5]  ; clk          ; clk         ; 1.000        ; -0.082     ; 5.071      ;
+; -4.152 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][4]  ; clk          ; clk         ; 1.000        ; -0.082     ; 5.071      ;
+; -4.152 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][3]  ; clk          ; clk         ; 1.000        ; -0.082     ; 5.071      ;
+; -4.151 ; m_mod:m_mod_map|num_reg[2]                ; transmiter:transmiter_map|data_reg[6]     ; clk          ; clk         ; 1.000        ; -0.078     ; 5.074      ;
+; -4.148 ; m_mod:m_mod_map|num_reg[5]                ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 1.000        ; -0.079     ; 5.070      ;
+; -4.148 ; m_mod:m_mod_map|num_reg[5]                ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.079     ; 5.070      ;
+; -4.148 ; m_mod:m_mod_map|num_reg[5]                ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.079     ; 5.070      ;
+; -4.148 ; m_mod:m_mod_map|num_reg[5]                ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.079     ; 5.070      ;
+; -4.148 ; m_mod:m_mod_map|num_reg[5]                ; transmiter:transmiter_map|data_reg[1]     ; clk          ; clk         ; 1.000        ; -0.079     ; 5.070      ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                   ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.432 ; transmiter:transmiter_map|s_reg[3]        ; transmiter:transmiter_map|s_reg[3]        ; clk          ; clk         ; 0.000        ; 0.102      ; 0.746      ;
+; 0.432 ; transmiter:transmiter_map|state_reg.idle  ; transmiter:transmiter_map|state_reg.idle  ; clk          ; clk         ; 0.000        ; 0.102      ; 0.746      ;
+; 0.432 ; transmiter:transmiter_map|state_reg.data  ; transmiter:transmiter_map|state_reg.data  ; clk          ; clk         ; 0.000        ; 0.102      ; 0.746      ;
+; 0.432 ; transmiter:transmiter_map|state_reg.stop  ; transmiter:transmiter_map|state_reg.stop  ; clk          ; clk         ; 0.000        ; 0.102      ; 0.746      ;
+; 0.432 ; transmiter:transmiter_map|state_reg.start ; transmiter:transmiter_map|state_reg.start ; clk          ; clk         ; 0.000        ; 0.102      ; 0.746      ;
+; 0.453 ; transmiter:transmiter_map|s_reg[1]        ; transmiter:transmiter_map|s_reg[1]        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; transmiter:transmiter_map|s_reg[2]        ; transmiter:transmiter_map|s_reg[2]        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; transmiter:transmiter_map|s_reg[0]        ; transmiter:transmiter_map|s_reg[0]        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; receiver:receiver_map|state_reg.stop      ; receiver:receiver_map|state_reg.stop      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; receiver:receiver_map|s_reg[2]            ; receiver:receiver_map|s_reg[2]            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; receiver:receiver_map|s_reg[1]            ; receiver:receiver_map|s_reg[1]            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; receiver:receiver_map|s_reg[3]            ; receiver:receiver_map|s_reg[3]            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; receiver:receiver_map|s_reg[0]            ; receiver:receiver_map|s_reg[0]            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; receiver:receiver_map|state_reg.data      ; receiver:receiver_map|state_reg.data      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.454 ; fifo:fifo_transmiter_map|empty_reg        ; fifo:fifo_transmiter_map|empty_reg        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; fifo:fifo_transmiter_map|full_reg         ; fifo:fifo_transmiter_map|full_reg         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; fifo:fifo_transmiter_map|wr_ptr_reg[1]    ; fifo:fifo_transmiter_map|wr_ptr_reg[1]    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; transmiter:transmiter_map|n_reg[1]        ; transmiter:transmiter_map|n_reg[1]        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; transmiter:transmiter_map|n_reg[2]        ; transmiter:transmiter_map|n_reg[2]        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; transmiter:transmiter_map|n_reg[0]        ; transmiter:transmiter_map|n_reg[0]        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; receiver:receiver_map|state_reg.idle      ; receiver:receiver_map|state_reg.idle      ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; receiver:receiver_map|state_reg.start     ; receiver:receiver_map|state_reg.start     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; receiver:receiver_map|n_reg[1]            ; receiver:receiver_map|n_reg[1]            ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; receiver:receiver_map|n_reg[2]            ; receiver:receiver_map|n_reg[2]            ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; receiver:receiver_map|n_reg[0]            ; receiver:receiver_map|n_reg[0]            ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.466 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.758      ;
+; 0.466 ; fifo:fifo_transmiter_map|wr_ptr_reg[0]    ; fifo:fifo_transmiter_map|wr_ptr_reg[0]    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.758      ;
+; 0.523 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[23][7] ; clk          ; clk         ; 0.000        ; 0.581      ; 1.316      ;
+; 0.528 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[30][4] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.820      ;
+; 0.536 ; receiver:receiver_map|d_reg[2]            ; receiver:receiver_map|d_reg[3]            ; clk          ; clk         ; 0.000        ; 0.080      ; 0.828      ;
+; 0.536 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][2] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.828      ;
+; 0.551 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[28][5] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.843      ;
+; 0.557 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.849      ;
+; 0.557 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.849      ;
+; 0.559 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][3] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.851      ;
+; 0.560 ; receiver:receiver_map|d_reg[3]            ; receiver:receiver_map|d_reg[4]            ; clk          ; clk         ; 0.000        ; 0.080      ; 0.852      ;
+; 0.565 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[6][5]  ; clk          ; clk         ; 0.000        ; 0.533      ; 1.310      ;
+; 0.571 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[23][5] ; clk          ; clk         ; 0.000        ; 0.581      ; 1.364      ;
+; 0.599 ; receiver:receiver_map|d_reg[0]            ; fifo:fifo_transmiter_map|array_reg[26][0] ; clk          ; clk         ; 0.000        ; 0.592      ; 1.403      ;
+; 0.606 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[12][5] ; clk          ; clk         ; 0.000        ; 0.586      ; 1.404      ;
+; 0.639 ; receiver:receiver_map|d_reg[0]            ; fifo:fifo_transmiter_map|array_reg[27][0] ; clk          ; clk         ; 0.000        ; 0.552      ; 1.403      ;
+; 0.677 ; receiver:receiver_map|d_reg[1]            ; receiver:receiver_map|d_reg[2]            ; clk          ; clk         ; 0.000        ; 0.080      ; 0.969      ;
+; 0.679 ; receiver:receiver_map|d_reg[1]            ; fifo:fifo_transmiter_map|array_reg[30][1] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.971      ;
+; 0.692 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[28][7] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.984      ;
+; 0.692 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[30][6] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.984      ;
+; 0.699 ; transmiter:transmiter_map|data_reg[1]     ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.991      ;
+; 0.700 ; transmiter:transmiter_map|data_reg[3]     ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.992      ;
+; 0.700 ; transmiter:transmiter_map|data_reg[2]     ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 0.000        ; 0.080      ; 0.992      ;
+; 0.706 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[23][3] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.496      ;
+; 0.712 ; m_mod:m_mod_map|num_reg[7]                ; m_mod:m_mod_map|num_reg[7]                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.004      ;
+; 0.713 ; receiver:receiver_map|d_reg[0]            ; fifo:fifo_transmiter_map|array_reg[20][0] ; clk          ; clk         ; 0.000        ; 0.586      ; 1.511      ;
+; 0.720 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[23][2] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.510      ;
+; 0.739 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[20][7] ; clk          ; clk         ; 0.000        ; 0.589      ; 1.540      ;
+; 0.741 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[26][6] ; clk          ; clk         ; 0.000        ; 0.592      ; 1.545      ;
+; 0.741 ; fifo:fifo_transmiter_map|wr_ptr_reg[2]    ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.080      ; 1.033      ;
+; 0.754 ; transmiter:transmiter_map|s_reg[0]        ; transmiter:transmiter_map|s_reg[1]        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.047      ;
+; 0.757 ; m_mod:m_mod_map|num_reg[6]                ; m_mod:m_mod_map|num_reg[6]                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.049      ;
+; 0.757 ; m_mod:m_mod_map|num_reg[2]                ; m_mod:m_mod_map|num_reg[2]                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.049      ;
+; 0.758 ; receiver:receiver_map|d_reg[0]            ; fifo:fifo_transmiter_map|array_reg[29][0] ; clk          ; clk         ; 0.000        ; 0.541      ; 1.511      ;
+; 0.763 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[26][2] ; clk          ; clk         ; 0.000        ; 0.592      ; 1.567      ;
+; 0.765 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[20][4] ; clk          ; clk         ; 0.000        ; 0.586      ; 1.563      ;
+; 0.770 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[20][3] ; clk          ; clk         ; 0.000        ; 0.586      ; 1.568      ;
+; 0.771 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.080      ; 1.063      ;
+; 0.780 ; transmiter:transmiter_map|data_reg[4]     ; transmiter:transmiter_map|data_reg[5]     ; clk          ; clk         ; 0.000        ; 0.535      ; 1.527      ;
+; 0.781 ; fifo:fifo_transmiter_map|wr_ptr_reg[1]    ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.080      ; 1.073      ;
+; 0.784 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[29][7] ; clk          ; clk         ; 0.000        ; 0.544      ; 1.540      ;
+; 0.788 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[8][5]  ; clk          ; clk         ; 0.000        ; 0.599      ; 1.599      ;
+; 0.789 ; fifo:fifo_transmiter_map|wr_ptr_reg[0]    ; fifo:fifo_transmiter_map|wr_ptr_reg[1]    ; clk          ; clk         ; 0.000        ; 0.080      ; 1.081      ;
+; 0.791 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[26][4] ; clk          ; clk         ; 0.000        ; 0.592      ; 1.595      ;
+; 0.791 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[6][3]  ; clk          ; clk         ; 0.000        ; 0.530      ; 1.533      ;
+; 0.791 ; fifo:fifo_transmiter_map|wr_ptr_reg[0]    ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.080      ; 1.083      ;
+; 0.803 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[23][6] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.593      ;
+; 0.806 ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; transmiter:transmiter_map|data_reg[1]     ; clk          ; clk         ; 0.000        ; 0.080      ; 1.098      ;
+; 0.807 ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 0.000        ; 0.080      ; 1.099      ;
+; 0.809 ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 0.000        ; 0.080      ; 1.101      ;
+; 0.810 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[29][4] ; clk          ; clk         ; 0.000        ; 0.541      ; 1.563      ;
+; 0.815 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[29][3] ; clk          ; clk         ; 0.000        ; 0.541      ; 1.568      ;
+; 0.816 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[6][4]  ; clk          ; clk         ; 0.000        ; 0.530      ; 1.558      ;
+; 0.817 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[8][7]  ; clk          ; clk         ; 0.000        ; 0.599      ; 1.628      ;
+; 0.823 ; receiver:receiver_map|d_reg[1]            ; fifo:fifo_transmiter_map|array_reg[2][1]  ; clk          ; clk         ; 0.000        ; 0.549      ; 1.584      ;
+; 0.825 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; clk          ; clk         ; 0.000        ; 0.080      ; 1.117      ;
+; 0.826 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[6][7]  ; clk          ; clk         ; 0.000        ; 0.533      ; 1.571      ;
+; 0.828 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[27][4] ; clk          ; clk         ; 0.000        ; 0.552      ; 1.592      ;
+; 0.828 ; fifo:fifo_transmiter_map|empty_reg        ; transmiter:transmiter_map|state_reg.idle  ; clk          ; clk         ; 0.000        ; 0.624      ; 1.664      ;
+; 0.830 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[14][5] ; clk          ; clk         ; 0.000        ; 0.557      ; 1.599      ;
+; 0.831 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; clk          ; clk         ; 0.000        ; 0.080      ; 1.123      ;
+; 0.835 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[27][6] ; clk          ; clk         ; 0.000        ; 0.552      ; 1.599      ;
+; 0.837 ; receiver:receiver_map|d_reg[1]            ; fifo:fifo_transmiter_map|array_reg[15][1] ; clk          ; clk         ; 0.000        ; 0.563      ; 1.612      ;
+; 0.843 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[16][3] ; clk          ; clk         ; 0.000        ; 0.589      ; 1.644      ;
+; 0.857 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[6][6]  ; clk          ; clk         ; 0.000        ; 0.530      ; 1.599      ;
+; 0.859 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[14][7] ; clk          ; clk         ; 0.000        ; 0.557      ; 1.628      ;
+; 0.859 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[27][2] ; clk          ; clk         ; 0.000        ; 0.552      ; 1.623      ;
+; 0.861 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[20][5] ; clk          ; clk         ; 0.000        ; 0.589      ; 1.662      ;
+; 0.862 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[11][7] ; clk          ; clk         ; 0.000        ; 0.596      ; 1.670      ;
+; 0.874 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[11][2] ; clk          ; clk         ; 0.000        ; 0.593      ; 1.679      ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 191.31 MHz ; 191.31 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -4.227 ; -1086.912         ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.382 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -471.405                        ;
++-------+--------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                    ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.227 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.072     ; 5.157      ;
+; -4.192 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.072     ; 5.122      ;
+; -4.173 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.072     ; 5.103      ;
+; -4.172 ; fifo:fifo_transmiter_map|array_reg[21][0] ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.078     ; 5.096      ;
+; -4.168 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.072     ; 5.098      ;
+; -4.166 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.072     ; 5.096      ;
+; -4.143 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.069     ; 5.076      ;
+; -4.125 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.072     ; 5.055      ;
+; -4.090 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.069     ; 5.023      ;
+; -4.085 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 1.000        ; -0.072     ; 5.015      ;
+; -4.047 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.072     ; 4.977      ;
+; -4.034 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.072     ; 4.964      ;
+; -4.033 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 1.000        ; -0.072     ; 4.963      ;
+; -4.028 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.069     ; 4.961      ;
+; -3.992 ; fifo:fifo_transmiter_map|array_reg[19][3] ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.547     ; 4.447      ;
+; -3.990 ; fifo:fifo_transmiter_map|array_reg[11][2] ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.555     ; 4.437      ;
+; -3.976 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[6]     ; clk          ; clk         ; 1.000        ; -0.071     ; 4.907      ;
+; -3.973 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][7]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.906      ;
+; -3.973 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][6]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.906      ;
+; -3.973 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][5]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.906      ;
+; -3.973 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][4]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.906      ;
+; -3.973 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][3]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.906      ;
+; -3.973 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][2]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.906      ;
+; -3.973 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][1]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.906      ;
+; -3.973 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][0]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.906      ;
+; -3.971 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][7]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.904      ;
+; -3.971 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][6]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.904      ;
+; -3.971 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][5]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.904      ;
+; -3.971 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][4]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.904      ;
+; -3.971 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][3]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.904      ;
+; -3.971 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][2]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.904      ;
+; -3.971 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][1]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.904      ;
+; -3.971 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][0]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.904      ;
+; -3.961 ; fifo:fifo_transmiter_map|array_reg[5][2]  ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.078     ; 4.885      ;
+; -3.944 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][7] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.874      ;
+; -3.944 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][6] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.874      ;
+; -3.944 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][5] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.874      ;
+; -3.944 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][4] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.874      ;
+; -3.944 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][3] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.874      ;
+; -3.944 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][2] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.874      ;
+; -3.944 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][1] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.874      ;
+; -3.944 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][0] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.874      ;
+; -3.944 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; transmiter:transmiter_map|data_reg[6]     ; clk          ; clk         ; 1.000        ; -0.071     ; 4.875      ;
+; -3.942 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][7] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.872      ;
+; -3.942 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][6] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.872      ;
+; -3.942 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][5] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.872      ;
+; -3.942 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][4] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.872      ;
+; -3.942 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][3] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.872      ;
+; -3.942 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][2] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.872      ;
+; -3.942 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][1] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.872      ;
+; -3.942 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][0] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.872      ;
+; -3.934 ; fifo:fifo_transmiter_map|array_reg[26][0] ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.550     ; 4.386      ;
+; -3.927 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[1]     ; clk          ; clk         ; 1.000        ; -0.072     ; 4.857      ;
+; -3.919 ; fifo:fifo_transmiter_map|array_reg[19][7] ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 1.000        ; -0.547     ; 4.374      ;
+; -3.901 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][7]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.834      ;
+; -3.901 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][6]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.834      ;
+; -3.901 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][5]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.834      ;
+; -3.901 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][4]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.834      ;
+; -3.901 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][3]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.834      ;
+; -3.901 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][2]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.834      ;
+; -3.901 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][1]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.834      ;
+; -3.901 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][0]  ; clk          ; clk         ; 1.000        ; -0.069     ; 4.834      ;
+; -3.899 ; m_mod:m_mod_map|num_reg[2]                ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 1.000        ; -0.070     ; 4.831      ;
+; -3.899 ; m_mod:m_mod_map|num_reg[2]                ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.070     ; 4.831      ;
+; -3.899 ; m_mod:m_mod_map|num_reg[2]                ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.070     ; 4.831      ;
+; -3.899 ; m_mod:m_mod_map|num_reg[2]                ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.070     ; 4.831      ;
+; -3.899 ; m_mod:m_mod_map|num_reg[2]                ; transmiter:transmiter_map|data_reg[1]     ; clk          ; clk         ; 1.000        ; -0.070     ; 4.831      ;
+; -3.897 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.072     ; 4.827      ;
+; -3.890 ; m_mod:m_mod_map|num_reg[2]                ; transmiter:transmiter_map|data_reg[6]     ; clk          ; clk         ; 1.000        ; -0.069     ; 4.823      ;
+; -3.888 ; fifo:fifo_transmiter_map|array_reg[3][2]  ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.074     ; 4.816      ;
+; -3.883 ; fifo:fifo_transmiter_map|array_reg[2][6]  ; transmiter:transmiter_map|data_reg[6]     ; clk          ; clk         ; 1.000        ; -0.068     ; 4.817      ;
+; -3.879 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][7]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.813      ;
+; -3.879 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][6]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.813      ;
+; -3.879 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][5]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.813      ;
+; -3.879 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][4]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.813      ;
+; -3.879 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][3]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.813      ;
+; -3.879 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][2]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.813      ;
+; -3.879 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][1]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.813      ;
+; -3.879 ; m_mod:m_mod_map|num_reg[2]                ; fifo:fifo_transmiter_map|array_reg[3][0]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.813      ;
+; -3.873 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.802      ;
+; -3.873 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.802      ;
+; -3.873 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][5]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.802      ;
+; -3.873 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][4]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.802      ;
+; -3.873 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][3]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.802      ;
+; -3.872 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[30][7] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.802      ;
+; -3.872 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[30][6] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.802      ;
+; -3.872 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[30][5] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.802      ;
+; -3.872 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[30][4] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.802      ;
+; -3.872 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[30][3] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.802      ;
+; -3.872 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[30][2] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.802      ;
+; -3.872 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[30][1] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.802      ;
+; -3.872 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[30][0] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.802      ;
+; -3.871 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.800      ;
+; -3.871 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.800      ;
+; -3.871 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][5]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.800      ;
+; -3.871 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][4]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.800      ;
+; -3.871 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][3]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.800      ;
+; -3.869 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[10][7] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.799      ;
+; -3.869 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[10][6] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.799      ;
+; -3.869 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[10][5] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.799      ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                    ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.382 ; transmiter:transmiter_map|s_reg[3]        ; transmiter:transmiter_map|s_reg[3]        ; clk          ; clk         ; 0.000        ; 0.092      ; 0.669      ;
+; 0.382 ; transmiter:transmiter_map|state_reg.idle  ; transmiter:transmiter_map|state_reg.idle  ; clk          ; clk         ; 0.000        ; 0.092      ; 0.669      ;
+; 0.382 ; transmiter:transmiter_map|state_reg.data  ; transmiter:transmiter_map|state_reg.data  ; clk          ; clk         ; 0.000        ; 0.092      ; 0.669      ;
+; 0.382 ; transmiter:transmiter_map|state_reg.stop  ; transmiter:transmiter_map|state_reg.stop  ; clk          ; clk         ; 0.000        ; 0.092      ; 0.669      ;
+; 0.382 ; transmiter:transmiter_map|state_reg.start ; transmiter:transmiter_map|state_reg.start ; clk          ; clk         ; 0.000        ; 0.092      ; 0.669      ;
+; 0.402 ; fifo:fifo_transmiter_map|empty_reg        ; fifo:fifo_transmiter_map|empty_reg        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; fifo:fifo_transmiter_map|full_reg         ; fifo:fifo_transmiter_map|full_reg         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; fifo:fifo_transmiter_map|wr_ptr_reg[1]    ; fifo:fifo_transmiter_map|wr_ptr_reg[1]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; transmiter:transmiter_map|s_reg[1]        ; transmiter:transmiter_map|s_reg[1]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; transmiter:transmiter_map|s_reg[2]        ; transmiter:transmiter_map|s_reg[2]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; transmiter:transmiter_map|s_reg[0]        ; transmiter:transmiter_map|s_reg[0]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; transmiter:transmiter_map|n_reg[1]        ; transmiter:transmiter_map|n_reg[1]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; transmiter:transmiter_map|n_reg[2]        ; transmiter:transmiter_map|n_reg[2]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; transmiter:transmiter_map|n_reg[0]        ; transmiter:transmiter_map|n_reg[0]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; receiver:receiver_map|state_reg.stop      ; receiver:receiver_map|state_reg.stop      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; receiver:receiver_map|s_reg[2]            ; receiver:receiver_map|s_reg[2]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; receiver:receiver_map|s_reg[1]            ; receiver:receiver_map|s_reg[1]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; receiver:receiver_map|s_reg[3]            ; receiver:receiver_map|s_reg[3]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; receiver:receiver_map|s_reg[0]            ; receiver:receiver_map|s_reg[0]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; receiver:receiver_map|state_reg.idle      ; receiver:receiver_map|state_reg.idle      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; receiver:receiver_map|state_reg.data      ; receiver:receiver_map|state_reg.data      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; receiver:receiver_map|state_reg.start     ; receiver:receiver_map|state_reg.start     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; receiver:receiver_map|n_reg[1]            ; receiver:receiver_map|n_reg[1]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; receiver:receiver_map|n_reg[2]            ; receiver:receiver_map|n_reg[2]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; receiver:receiver_map|n_reg[0]            ; receiver:receiver_map|n_reg[0]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.417 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.684      ;
+; 0.417 ; fifo:fifo_transmiter_map|wr_ptr_reg[0]    ; fifo:fifo_transmiter_map|wr_ptr_reg[0]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.684      ;
+; 0.440 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[23][7] ; clk          ; clk         ; 0.000        ; 0.543      ; 1.178      ;
+; 0.483 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[23][5] ; clk          ; clk         ; 0.000        ; 0.543      ; 1.221      ;
+; 0.493 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[30][4] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.760      ;
+; 0.499 ; receiver:receiver_map|d_reg[2]            ; receiver:receiver_map|d_reg[3]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.766      ;
+; 0.499 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][2] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.766      ;
+; 0.507 ; receiver:receiver_map|d_reg[0]            ; fifo:fifo_transmiter_map|array_reg[26][0] ; clk          ; clk         ; 0.000        ; 0.554      ; 1.256      ;
+; 0.514 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[12][5] ; clk          ; clk         ; 0.000        ; 0.548      ; 1.257      ;
+; 0.514 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.781      ;
+; 0.515 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[28][5] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.782      ;
+; 0.515 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.782      ;
+; 0.520 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][3] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.787      ;
+; 0.522 ; receiver:receiver_map|d_reg[3]            ; receiver:receiver_map|d_reg[4]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.789      ;
+; 0.523 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[6][5]  ; clk          ; clk         ; 0.000        ; 0.490      ; 1.208      ;
+; 0.551 ; receiver:receiver_map|d_reg[0]            ; fifo:fifo_transmiter_map|array_reg[27][0] ; clk          ; clk         ; 0.000        ; 0.510      ; 1.256      ;
+; 0.606 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[23][3] ; clk          ; clk         ; 0.000        ; 0.541      ; 1.342      ;
+; 0.619 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[23][2] ; clk          ; clk         ; 0.000        ; 0.541      ; 1.355      ;
+; 0.629 ; receiver:receiver_map|d_reg[1]            ; receiver:receiver_map|d_reg[2]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.896      ;
+; 0.631 ; receiver:receiver_map|d_reg[1]            ; fifo:fifo_transmiter_map|array_reg[30][1] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.898      ;
+; 0.636 ; m_mod:m_mod_map|num_reg[7]                ; m_mod:m_mod_map|num_reg[7]                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.903      ;
+; 0.642 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[30][6] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.909      ;
+; 0.642 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[26][6] ; clk          ; clk         ; 0.000        ; 0.554      ; 1.391      ;
+; 0.642 ; receiver:receiver_map|d_reg[0]            ; fifo:fifo_transmiter_map|array_reg[20][0] ; clk          ; clk         ; 0.000        ; 0.547      ; 1.384      ;
+; 0.643 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[28][7] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.910      ;
+; 0.645 ; transmiter:transmiter_map|data_reg[1]     ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.912      ;
+; 0.647 ; transmiter:transmiter_map|data_reg[3]     ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.914      ;
+; 0.647 ; transmiter:transmiter_map|data_reg[2]     ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.914      ;
+; 0.655 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[20][7] ; clk          ; clk         ; 0.000        ; 0.549      ; 1.399      ;
+; 0.659 ; fifo:fifo_transmiter_map|wr_ptr_reg[2]    ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.926      ;
+; 0.662 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[26][2] ; clk          ; clk         ; 0.000        ; 0.554      ; 1.411      ;
+; 0.670 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[20][4] ; clk          ; clk         ; 0.000        ; 0.547      ; 1.412      ;
+; 0.676 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[20][3] ; clk          ; clk         ; 0.000        ; 0.547      ; 1.418      ;
+; 0.687 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[23][6] ; clk          ; clk         ; 0.000        ; 0.541      ; 1.423      ;
+; 0.690 ; receiver:receiver_map|d_reg[0]            ; fifo:fifo_transmiter_map|array_reg[29][0] ; clk          ; clk         ; 0.000        ; 0.499      ; 1.384      ;
+; 0.698 ; transmiter:transmiter_map|data_reg[4]     ; transmiter:transmiter_map|data_reg[5]     ; clk          ; clk         ; 0.000        ; 0.489      ; 1.382      ;
+; 0.702 ; transmiter:transmiter_map|s_reg[0]        ; transmiter:transmiter_map|s_reg[1]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.969      ;
+; 0.703 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[29][7] ; clk          ; clk         ; 0.000        ; 0.501      ; 1.399      ;
+; 0.703 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[8][5]  ; clk          ; clk         ; 0.000        ; 0.555      ; 1.453      ;
+; 0.703 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[6][3]  ; clk          ; clk         ; 0.000        ; 0.488      ; 1.386      ;
+; 0.706 ; m_mod:m_mod_map|num_reg[2]                ; m_mod:m_mod_map|num_reg[2]                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.707 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[26][4] ; clk          ; clk         ; 0.000        ; 0.554      ; 1.456      ;
+; 0.707 ; m_mod:m_mod_map|num_reg[6]                ; m_mod:m_mod_map|num_reg[6]                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.711 ; fifo:fifo_transmiter_map|empty_reg        ; transmiter:transmiter_map|state_reg.idle  ; clk          ; clk         ; 0.000        ; 0.584      ; 1.490      ;
+; 0.714 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.981      ;
+; 0.718 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[29][4] ; clk          ; clk         ; 0.000        ; 0.499      ; 1.412      ;
+; 0.723 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[29][3] ; clk          ; clk         ; 0.000        ; 0.499      ; 1.417      ;
+; 0.726 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[6][4]  ; clk          ; clk         ; 0.000        ; 0.488      ; 1.409      ;
+; 0.726 ; fifo:fifo_transmiter_map|wr_ptr_reg[1]    ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.993      ;
+; 0.729 ; receiver:receiver_map|d_reg[1]            ; fifo:fifo_transmiter_map|array_reg[15][1] ; clk          ; clk         ; 0.000        ; 0.521      ; 1.445      ;
+; 0.729 ; receiver:receiver_map|d_reg[1]            ; fifo:fifo_transmiter_map|array_reg[2][1]  ; clk          ; clk         ; 0.000        ; 0.507      ; 1.431      ;
+; 0.734 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[8][7]  ; clk          ; clk         ; 0.000        ; 0.555      ; 1.484      ;
+; 0.735 ; fifo:fifo_transmiter_map|wr_ptr_reg[0]    ; fifo:fifo_transmiter_map|wr_ptr_reg[1]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.002      ;
+; 0.737 ; fifo:fifo_transmiter_map|wr_ptr_reg[0]    ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.004      ;
+; 0.739 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[11][7] ; clk          ; clk         ; 0.000        ; 0.558      ; 1.492      ;
+; 0.740 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[6][7]  ; clk          ; clk         ; 0.000        ; 0.490      ; 1.425      ;
+; 0.745 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[14][5] ; clk          ; clk         ; 0.000        ; 0.512      ; 1.452      ;
+; 0.746 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[11][2] ; clk          ; clk         ; 0.000        ; 0.556      ; 1.497      ;
+; 0.747 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[27][6] ; clk          ; clk         ; 0.000        ; 0.510      ; 1.452      ;
+; 0.749 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[27][4] ; clk          ; clk         ; 0.000        ; 0.510      ; 1.454      ;
+; 0.754 ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; transmiter:transmiter_map|data_reg[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.021      ;
+; 0.755 ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.022      ;
+; 0.755 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[16][3] ; clk          ; clk         ; 0.000        ; 0.552      ; 1.502      ;
+; 0.756 ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.023      ;
+; 0.761 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[20][5] ; clk          ; clk         ; 0.000        ; 0.550      ; 1.506      ;
+; 0.762 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[4][6]  ; clk          ; clk         ; 0.000        ; 0.552      ; 1.509      ;
+; 0.766 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[6][6]  ; clk          ; clk         ; 0.000        ; 0.488      ; 1.449      ;
+; 0.767 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[27][2] ; clk          ; clk         ; 0.000        ; 0.510      ; 1.472      ;
+; 0.769 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.036      ;
+; 0.776 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.043      ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -1.468 ; -339.232          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.178 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -341.664                        ;
++-------+--------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                    ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.468 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.419      ;
+; -1.463 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.414      ;
+; -1.451 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.402      ;
+; -1.447 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.398      ;
+; -1.446 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.397      ;
+; -1.424 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.375      ;
+; -1.403 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.354      ;
+; -1.401 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.352      ;
+; -1.383 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[6]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.334      ;
+; -1.369 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.320      ;
+; -1.368 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.319      ;
+; -1.367 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; transmiter:transmiter_map|data_reg[6]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.318      ;
+; -1.366 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.038     ; 2.315      ;
+; -1.356 ; fifo:fifo_transmiter_map|array_reg[21][0] ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.042     ; 2.301      ;
+; -1.336 ; fifo:fifo_transmiter_map|array_reg[19][3] ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.244     ; 2.079      ;
+; -1.332 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.038     ; 2.281      ;
+; -1.317 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][7]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.272      ;
+; -1.317 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][6]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.272      ;
+; -1.317 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][5]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.272      ;
+; -1.317 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][4]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.272      ;
+; -1.317 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][3]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.272      ;
+; -1.317 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][2]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.272      ;
+; -1.317 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][1]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.272      ;
+; -1.317 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[3][0]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.272      ;
+; -1.316 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.038     ; 2.265      ;
+; -1.313 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][7]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.268      ;
+; -1.313 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][6]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.268      ;
+; -1.313 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][5]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.268      ;
+; -1.313 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][4]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.268      ;
+; -1.313 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][3]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.268      ;
+; -1.313 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][2]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.268      ;
+; -1.313 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][1]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.268      ;
+; -1.313 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[3][0]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.268      ;
+; -1.308 ; fifo:fifo_transmiter_map|array_reg[2][6]  ; transmiter:transmiter_map|data_reg[6]     ; clk          ; clk         ; 1.000        ; -0.033     ; 2.262      ;
+; -1.306 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; transmiter:transmiter_map|data_reg[1]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.257      ;
+; -1.299 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][7] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.252      ;
+; -1.299 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][6] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.252      ;
+; -1.299 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][5] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.252      ;
+; -1.299 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][4] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.252      ;
+; -1.299 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][3] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.252      ;
+; -1.299 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][2] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.252      ;
+; -1.299 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][1] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.252      ;
+; -1.299 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][0] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.252      ;
+; -1.295 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][7] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.248      ;
+; -1.295 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][6] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.248      ;
+; -1.295 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][5] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.248      ;
+; -1.295 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][4] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.248      ;
+; -1.295 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][3] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.248      ;
+; -1.295 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][2] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.248      ;
+; -1.295 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][1] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.248      ;
+; -1.295 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][0] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.248      ;
+; -1.292 ; fifo:fifo_transmiter_map|array_reg[5][2]  ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.037     ; 2.242      ;
+; -1.279 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 1.000        ; -0.036     ; 2.230      ;
+; -1.275 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][7]  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.225      ;
+; -1.275 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][6]  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.225      ;
+; -1.275 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][5]  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.225      ;
+; -1.275 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][4]  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.225      ;
+; -1.275 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[0][3]  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.225      ;
+; -1.273 ; fifo:fifo_transmiter_map|array_reg[11][2] ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.246     ; 2.014      ;
+; -1.271 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][7]  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.221      ;
+; -1.271 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][6]  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.221      ;
+; -1.271 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][5]  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.221      ;
+; -1.271 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][4]  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.221      ;
+; -1.271 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[0][3]  ; clk          ; clk         ; 1.000        ; -0.037     ; 2.221      ;
+; -1.270 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[6][2]  ; clk          ; clk         ; 1.000        ; 0.151      ; 2.408      ;
+; -1.270 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[6][1]  ; clk          ; clk         ; 1.000        ; 0.151      ; 2.408      ;
+; -1.269 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][7]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.224      ;
+; -1.269 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][6]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.224      ;
+; -1.269 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][5]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.224      ;
+; -1.269 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][4]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.224      ;
+; -1.269 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][3]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.224      ;
+; -1.269 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][2]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.224      ;
+; -1.269 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][1]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.224      ;
+; -1.269 ; receiver:receiver_map|s_reg[0]            ; fifo:fifo_transmiter_map|array_reg[3][0]  ; clk          ; clk         ; 1.000        ; -0.032     ; 2.224      ;
+; -1.269 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; transmiter:transmiter_map|data_reg[0]     ; clk          ; clk         ; 1.000        ; -0.038     ; 2.218      ;
+; -1.268 ; fifo:fifo_transmiter_map|array_reg[3][2]  ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 1.000        ; -0.038     ; 2.217      ;
+; -1.266 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[6][2]  ; clk          ; clk         ; 1.000        ; 0.151      ; 2.404      ;
+; -1.266 ; receiver:receiver_map|s_reg[3]            ; fifo:fifo_transmiter_map|array_reg[6][1]  ; clk          ; clk         ; 1.000        ; 0.151      ; 2.404      ;
+; -1.265 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[22][7] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.218      ;
+; -1.265 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[22][6] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.218      ;
+; -1.265 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[22][5] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.218      ;
+; -1.265 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[22][4] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.218      ;
+; -1.265 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[22][3] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.218      ;
+; -1.265 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[22][2] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.218      ;
+; -1.265 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[22][1] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.218      ;
+; -1.265 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[22][0] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.218      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[31][7] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.214      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[28][7] ; clk          ; clk         ; 1.000        ; -0.038     ; 2.210      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[31][6] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.214      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[28][6] ; clk          ; clk         ; 1.000        ; -0.038     ; 2.210      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[31][5] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.214      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[28][5] ; clk          ; clk         ; 1.000        ; -0.038     ; 2.210      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[31][4] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.214      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[28][4] ; clk          ; clk         ; 1.000        ; -0.038     ; 2.210      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[31][3] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.214      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[28][3] ; clk          ; clk         ; 1.000        ; -0.038     ; 2.210      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[31][2] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.214      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[28][2] ; clk          ; clk         ; 1.000        ; -0.038     ; 2.210      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[31][1] ; clk          ; clk         ; 1.000        ; -0.034     ; 2.214      ;
+; -1.261 ; receiver:receiver_map|s_reg[2]            ; fifo:fifo_transmiter_map|array_reg[28][1] ; clk          ; clk         ; 1.000        ; -0.038     ; 2.210      ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                    ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.178 ; transmiter:transmiter_map|s_reg[3]        ; transmiter:transmiter_map|s_reg[3]        ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; transmiter:transmiter_map|state_reg.idle  ; transmiter:transmiter_map|state_reg.idle  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; transmiter:transmiter_map|state_reg.data  ; transmiter:transmiter_map|state_reg.data  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; transmiter:transmiter_map|state_reg.stop  ; transmiter:transmiter_map|state_reg.stop  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; transmiter:transmiter_map|state_reg.start ; transmiter:transmiter_map|state_reg.start ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.187 ; fifo:fifo_transmiter_map|empty_reg        ; fifo:fifo_transmiter_map|empty_reg        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; fifo:fifo_transmiter_map|full_reg         ; fifo:fifo_transmiter_map|full_reg         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; fifo:fifo_transmiter_map|wr_ptr_reg[1]    ; fifo:fifo_transmiter_map|wr_ptr_reg[1]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; transmiter:transmiter_map|s_reg[1]        ; transmiter:transmiter_map|s_reg[1]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; transmiter:transmiter_map|s_reg[2]        ; transmiter:transmiter_map|s_reg[2]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; transmiter:transmiter_map|s_reg[0]        ; transmiter:transmiter_map|s_reg[0]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; transmiter:transmiter_map|n_reg[1]        ; transmiter:transmiter_map|n_reg[1]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; transmiter:transmiter_map|n_reg[2]        ; transmiter:transmiter_map|n_reg[2]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; transmiter:transmiter_map|n_reg[0]        ; transmiter:transmiter_map|n_reg[0]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; receiver:receiver_map|state_reg.stop      ; receiver:receiver_map|state_reg.stop      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; receiver:receiver_map|s_reg[2]            ; receiver:receiver_map|s_reg[2]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; receiver:receiver_map|s_reg[1]            ; receiver:receiver_map|s_reg[1]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; receiver:receiver_map|s_reg[3]            ; receiver:receiver_map|s_reg[3]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; receiver:receiver_map|s_reg[0]            ; receiver:receiver_map|s_reg[0]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; receiver:receiver_map|state_reg.idle      ; receiver:receiver_map|state_reg.idle      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; receiver:receiver_map|state_reg.data      ; receiver:receiver_map|state_reg.data      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; receiver:receiver_map|state_reg.start     ; receiver:receiver_map|state_reg.start     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; receiver:receiver_map|n_reg[1]            ; receiver:receiver_map|n_reg[1]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; receiver:receiver_map|n_reg[2]            ; receiver:receiver_map|n_reg[2]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; receiver:receiver_map|n_reg[0]            ; receiver:receiver_map|n_reg[0]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.194 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.314      ;
+; 0.194 ; fifo:fifo_transmiter_map|wr_ptr_reg[0]    ; fifo:fifo_transmiter_map|wr_ptr_reg[0]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.314      ;
+; 0.200 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[6][5]  ; clk          ; clk         ; 0.000        ; 0.221      ; 0.505      ;
+; 0.206 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[30][4] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.326      ;
+; 0.209 ; receiver:receiver_map|d_reg[2]            ; receiver:receiver_map|d_reg[3]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.329      ;
+; 0.209 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[30][2] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.329      ;
+; 0.212 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[23][7] ; clk          ; clk         ; 0.000        ; 0.241      ; 0.537      ;
+; 0.217 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[28][5] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.337      ;
+; 0.220 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[30][3] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.340      ;
+; 0.222 ; receiver:receiver_map|d_reg[3]            ; receiver:receiver_map|d_reg[4]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.342      ;
+; 0.226 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[23][5] ; clk          ; clk         ; 0.000        ; 0.241      ; 0.551      ;
+; 0.230 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.350      ;
+; 0.231 ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.351      ;
+; 0.239 ; receiver:receiver_map|d_reg[0]            ; fifo:fifo_transmiter_map|array_reg[26][0] ; clk          ; clk         ; 0.000        ; 0.245      ; 0.568      ;
+; 0.241 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[12][5] ; clk          ; clk         ; 0.000        ; 0.241      ; 0.566      ;
+; 0.254 ; receiver:receiver_map|d_reg[0]            ; fifo:fifo_transmiter_map|array_reg[27][0] ; clk          ; clk         ; 0.000        ; 0.230      ; 0.568      ;
+; 0.266 ; transmiter:transmiter_map|data_reg[1]     ; transmiter:transmiter_map|data_reg[2]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.386      ;
+; 0.266 ; receiver:receiver_map|d_reg[0]            ; fifo:fifo_transmiter_map|array_reg[20][0] ; clk          ; clk         ; 0.000        ; 0.239      ; 0.589      ;
+; 0.267 ; transmiter:transmiter_map|data_reg[3]     ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.387      ;
+; 0.269 ; transmiter:transmiter_map|data_reg[2]     ; transmiter:transmiter_map|data_reg[3]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.389      ;
+; 0.270 ; receiver:receiver_map|d_reg[1]            ; receiver:receiver_map|d_reg[2]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.390      ;
+; 0.271 ; m_mod:m_mod_map|num_reg[7]                ; m_mod:m_mod_map|num_reg[7]                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.391      ;
+; 0.272 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[23][3] ; clk          ; clk         ; 0.000        ; 0.237      ; 0.593      ;
+; 0.272 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[23][2] ; clk          ; clk         ; 0.000        ; 0.237      ; 0.593      ;
+; 0.272 ; receiver:receiver_map|d_reg[1]            ; fifo:fifo_transmiter_map|array_reg[30][1] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.392      ;
+; 0.276 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[28][7] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.396      ;
+; 0.276 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[30][6] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.396      ;
+; 0.278 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[20][7] ; clk          ; clk         ; 0.000        ; 0.243      ; 0.605      ;
+; 0.282 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[20][4] ; clk          ; clk         ; 0.000        ; 0.239      ; 0.605      ;
+; 0.282 ; receiver:receiver_map|d_reg[0]            ; fifo:fifo_transmiter_map|array_reg[29][0] ; clk          ; clk         ; 0.000        ; 0.222      ; 0.588      ;
+; 0.285 ; fifo:fifo_transmiter_map|wr_ptr_reg[2]    ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.405      ;
+; 0.286 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[20][3] ; clk          ; clk         ; 0.000        ; 0.239      ; 0.609      ;
+; 0.292 ; transmiter:transmiter_map|data_reg[4]     ; transmiter:transmiter_map|data_reg[5]     ; clk          ; clk         ; 0.000        ; 0.218      ; 0.594      ;
+; 0.294 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[26][6] ; clk          ; clk         ; 0.000        ; 0.245      ; 0.623      ;
+; 0.295 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[29][7] ; clk          ; clk         ; 0.000        ; 0.226      ; 0.605      ;
+; 0.298 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[8][5]  ; clk          ; clk         ; 0.000        ; 0.250      ; 0.632      ;
+; 0.299 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[6][3]  ; clk          ; clk         ; 0.000        ; 0.217      ; 0.600      ;
+; 0.300 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[29][4] ; clk          ; clk         ; 0.000        ; 0.222      ; 0.606      ;
+; 0.302 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[26][2] ; clk          ; clk         ; 0.000        ; 0.245      ; 0.631      ;
+; 0.303 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[29][3] ; clk          ; clk         ; 0.000        ; 0.222      ; 0.609      ;
+; 0.303 ; transmiter:transmiter_map|s_reg[0]        ; transmiter:transmiter_map|s_reg[1]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.423      ;
+; 0.304 ; m_mod:m_mod_map|num_reg[2]                ; m_mod:m_mod_map|num_reg[2]                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.305 ; m_mod:m_mod_map|num_reg[6]                ; m_mod:m_mod_map|num_reg[6]                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.309 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[8][7]  ; clk          ; clk         ; 0.000        ; 0.250      ; 0.643      ;
+; 0.309 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[6][7]  ; clk          ; clk         ; 0.000        ; 0.221      ; 0.614      ;
+; 0.309 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[6][4]  ; clk          ; clk         ; 0.000        ; 0.217      ; 0.610      ;
+; 0.309 ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; fifo:fifo_transmiter_map|rd_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.429      ;
+; 0.314 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[14][5] ; clk          ; clk         ; 0.000        ; 0.234      ; 0.632      ;
+; 0.315 ; receiver:receiver_map|d_reg[1]            ; fifo:fifo_transmiter_map|array_reg[15][1] ; clk          ; clk         ; 0.000        ; 0.236      ; 0.635      ;
+; 0.317 ; receiver:receiver_map|d_reg[1]            ; fifo:fifo_transmiter_map|array_reg[2][1]  ; clk          ; clk         ; 0.000        ; 0.227      ; 0.628      ;
+; 0.317 ; fifo:fifo_transmiter_map|wr_ptr_reg[1]    ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.437      ;
+; 0.318 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[26][4] ; clk          ; clk         ; 0.000        ; 0.245      ; 0.647      ;
+; 0.320 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[6][6]  ; clk          ; clk         ; 0.000        ; 0.217      ; 0.621      ;
+; 0.322 ; fifo:fifo_transmiter_map|wr_ptr_reg[0]    ; fifo:fifo_transmiter_map|wr_ptr_reg[1]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.442      ;
+; 0.323 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[27][6] ; clk          ; clk         ; 0.000        ; 0.230      ; 0.637      ;
+; 0.324 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[16][3] ; clk          ; clk         ; 0.000        ; 0.242      ; 0.650      ;
+; 0.325 ; receiver:receiver_map|d_reg[7]            ; fifo:fifo_transmiter_map|array_reg[14][7] ; clk          ; clk         ; 0.000        ; 0.234      ; 0.643      ;
+; 0.325 ; fifo:fifo_transmiter_map|wr_ptr_reg[0]    ; fifo:fifo_transmiter_map|wr_ptr_reg[3]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.445      ;
+; 0.327 ; receiver:receiver_map|d_reg[6]            ; fifo:fifo_transmiter_map|array_reg[23][6] ; clk          ; clk         ; 0.000        ; 0.237      ; 0.648      ;
+; 0.327 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[20][5] ; clk          ; clk         ; 0.000        ; 0.243      ; 0.654      ;
+; 0.327 ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; transmiter:transmiter_map|data_reg[1]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.447      ;
+; 0.328 ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; transmiter:transmiter_map|data_reg[4]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.448      ;
+; 0.330 ; fifo:fifo_transmiter_map|rd_ptr_reg[4]    ; transmiter:transmiter_map|data_reg[7]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.450      ;
+; 0.330 ; receiver:receiver_map|d_reg[2]            ; fifo:fifo_transmiter_map|array_reg[27][2] ; clk          ; clk         ; 0.000        ; 0.230      ; 0.644      ;
+; 0.331 ; receiver:receiver_map|d_reg[4]            ; fifo:fifo_transmiter_map|array_reg[27][4] ; clk          ; clk         ; 0.000        ; 0.230      ; 0.645      ;
+; 0.334 ; fifo:fifo_transmiter_map|empty_reg        ; transmiter:transmiter_map|state_reg.idle  ; clk          ; clk         ; 0.000        ; 0.254      ; 0.672      ;
+; 0.336 ; receiver:receiver_map|d_reg[3]            ; fifo:fifo_transmiter_map|array_reg[25][3] ; clk          ; clk         ; 0.000        ; 0.229      ; 0.649      ;
+; 0.339 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; fifo:fifo_transmiter_map|rd_ptr_reg[2]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.459      ;
+; 0.344 ; receiver:receiver_map|d_reg[5]            ; fifo:fifo_transmiter_map|array_reg[29][5] ; clk          ; clk         ; 0.000        ; 0.225      ; 0.653      ;
+; 0.345 ; fifo:fifo_transmiter_map|rd_ptr_reg[0]    ; fifo:fifo_transmiter_map|rd_ptr_reg[1]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.465      ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -4.493    ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -4.493    ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -1166.57  ; 0.0   ; 0.0      ; 0.0     ; -471.405            ;
+;  clk             ; -1166.570 ; 0.000 ; N/A      ; N/A     ; -471.405            ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; tx            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; rx_full       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tx_full       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; rx_empty      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; r_data[0]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; r_data[1]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; r_data[2]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; r_data[3]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; r_data[4]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; r_data[5]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; r_data[6]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; r_data[7]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; rx1           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tx1           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rx                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tx            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; rx_full       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; tx_full       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.33 V              ; -0.00421 V          ; 0.165 V                              ; 0.078 V                              ; 3.11e-09 s                  ; 2.85e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.33 V             ; -0.00421 V         ; 0.165 V                             ; 0.078 V                             ; 3.11e-09 s                 ; 2.85e-09 s                 ; Yes                       ; Yes                       ;
+; rx_empty      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.38 V              ; -0.0073 V           ; 0.097 V                              ; 0.018 V                              ; 4.24e-10 s                  ; 3.65e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.38 V             ; -0.0073 V          ; 0.097 V                             ; 0.018 V                             ; 4.24e-10 s                 ; 3.65e-10 s                 ; No                        ; Yes                       ;
+; r_data[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.38 V              ; -0.0073 V           ; 0.097 V                              ; 0.018 V                              ; 4.24e-10 s                  ; 3.65e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.38 V             ; -0.0073 V          ; 0.097 V                             ; 0.018 V                             ; 4.24e-10 s                 ; 3.65e-10 s                 ; No                        ; Yes                       ;
+; r_data[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.38 V              ; -0.0073 V           ; 0.097 V                              ; 0.018 V                              ; 4.24e-10 s                  ; 3.65e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.38 V             ; -0.0073 V          ; 0.097 V                             ; 0.018 V                             ; 4.24e-10 s                 ; 3.65e-10 s                 ; No                        ; Yes                       ;
+; r_data[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[4]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[5]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[6]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.38 V              ; -0.0073 V           ; 0.097 V                              ; 0.018 V                              ; 4.24e-10 s                  ; 3.65e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.38 V             ; -0.0073 V          ; 0.097 V                             ; 0.018 V                             ; 4.24e-10 s                 ; 3.65e-10 s                 ; No                        ; Yes                       ;
+; r_data[7]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; rx1           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.38 V              ; -0.0073 V           ; 0.097 V                              ; 0.018 V                              ; 4.24e-10 s                  ; 3.65e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.38 V             ; -0.0073 V          ; 0.097 V                             ; 0.018 V                             ; 4.24e-10 s                 ; 3.65e-10 s                 ; No                        ; Yes                       ;
+; tx1           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.33 V              ; -0.00421 V          ; 0.165 V                              ; 0.078 V                              ; 3.11e-09 s                  ; 2.85e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.33 V             ; -0.00421 V         ; 0.165 V                             ; 0.078 V                             ; 3.11e-09 s                 ; 2.85e-09 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tx            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; rx_full       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; tx_full       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.33 V              ; -0.0022 V           ; 0.088 V                              ; 0.056 V                              ; 3.76e-09 s                  ; 3.48e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.33 V             ; -0.0022 V          ; 0.088 V                             ; 0.056 V                             ; 3.76e-09 s                 ; 3.48e-09 s                 ; Yes                       ; Yes                       ;
+; rx_empty      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.35 V              ; -0.00834 V          ; 0.127 V                              ; 0.035 V                              ; 4.7e-10 s                   ; 4.64e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.35 V             ; -0.00834 V         ; 0.127 V                             ; 0.035 V                             ; 4.7e-10 s                  ; 4.64e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.35 V              ; -0.00834 V          ; 0.127 V                              ; 0.035 V                              ; 4.7e-10 s                   ; 4.64e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.35 V             ; -0.00834 V         ; 0.127 V                             ; 0.035 V                             ; 4.7e-10 s                  ; 4.64e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.35 V              ; -0.00834 V          ; 0.127 V                              ; 0.035 V                              ; 4.7e-10 s                   ; 4.64e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.35 V             ; -0.00834 V         ; 0.127 V                             ; 0.035 V                             ; 4.7e-10 s                  ; 4.64e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[4]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[5]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[6]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.35 V              ; -0.00834 V          ; 0.127 V                              ; 0.035 V                              ; 4.7e-10 s                   ; 4.64e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.35 V             ; -0.00834 V         ; 0.127 V                             ; 0.035 V                             ; 4.7e-10 s                  ; 4.64e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[7]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; rx1           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.35 V              ; -0.00834 V          ; 0.127 V                              ; 0.035 V                              ; 4.7e-10 s                   ; 4.64e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.35 V             ; -0.00834 V         ; 0.127 V                             ; 0.035 V                             ; 4.7e-10 s                  ; 4.64e-10 s                 ; Yes                       ; Yes                       ;
+; tx1           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.33 V              ; -0.0022 V           ; 0.088 V                              ; 0.056 V                              ; 3.76e-09 s                  ; 3.48e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.33 V             ; -0.0022 V          ; 0.088 V                             ; 0.056 V                             ; 3.76e-09 s                 ; 3.48e-09 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tx            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; rx_full       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; tx_full       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.64 V              ; -0.0117 V           ; 0.202 V                              ; 0.176 V                              ; 2.38e-09 s                  ; 2.22e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.64 V             ; -0.0117 V          ; 0.202 V                             ; 0.176 V                             ; 2.38e-09 s                 ; 2.22e-09 s                 ; No                        ; Yes                       ;
+; rx_empty      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; r_data[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[4]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[5]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[6]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; r_data[7]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; rx1           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; tx1           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.64 V              ; -0.0117 V           ; 0.202 V                              ; 0.176 V                              ; 2.38e-09 s                  ; 2.22e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.64 V             ; -0.0117 V          ; 0.202 V                             ; 0.176 V                             ; 2.38e-09 s                 ; 2.22e-09 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 7277     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 7277     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 327   ; 327  ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 14    ; 14   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; clk        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rx         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; r_data[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[7]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rx1         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rx_empty    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rx_full     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tx          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tx1         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tx_full     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; clk        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rx         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; r_data[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r_data[7]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rx1         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rx_empty    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rx_full     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tx          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tx1         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tx_full     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sun Apr  1 20:17:47 2018
+Info: Command: quartus_sta uart -c uart
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'uart.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -4.493
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.493           -1166.570 clk 
+Info (332146): Worst-case hold slack is 0.432
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.432               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -471.405 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -4.227
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.227           -1086.912 clk 
+Info (332146): Worst-case hold slack is 0.382
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.382               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -471.405 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.468
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.468            -339.232 clk 
+Info (332146): Worst-case hold slack is 0.178
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.178               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -341.664 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 794 megabytes
+    Info: Processing ended: Sun Apr  1 20:17:49 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
